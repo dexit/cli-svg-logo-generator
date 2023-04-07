@@ -1,5 +1,14 @@
 # CLI SVH Logo Generator
 
+## TOC
+
+## About
+This code generates an SVG logo with customizable text & shape properties. It uses 'inquirer' module to prompt user input, 'fs' for file operations, & a custom shape module. User answers are used to create an SVG string that's written to a file.
+
+## Installation
+
+## Usage
+
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/6205151/230527319-dadc761a-c4ee-475a-8ee0-e7322f9e5d9b.png)
 
