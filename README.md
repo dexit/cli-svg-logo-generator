@@ -20,7 +20,17 @@ This code generates an SVG logo with customizable text & shape properties. It us
 
 ## Installation
 
+1. Clone the GitHub repository:
+``` git clone git@github.com:dexit/cli-svg-logo-generator.git ```
+2. Navigate to the cloned directory.
+3. Install dependencies:
+``` npm install ```
+
 ## Usage
+
+Run by executing via node :
+``` node index.js ``` or ``` npm start ```
+
 
 ## Walkthrough
 
@@ -34,6 +44,12 @@ This code generates an SVG logo with customizable text & shape properties. It us
 ## Tests
 ![image](https://user-images.githubusercontent.com/6205151/230526863-c6454631-52d3-4e5e-b94c-a74dd6a5d506.png)
 
+* The script tests shapes module/script (Shape, Circle, Square, Triangle) using Jest.
+* It checks if instances of each shape are created correctly.
+* It verifies if the render() method of each shape generates the expected SVG output with the correct attributes.
+
+Please run the tests by:
+``` npm test ```
 
 ## Licence
   [![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)](https://opensource.org/licenses/GPL)
