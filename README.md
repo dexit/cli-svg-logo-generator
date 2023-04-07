@@ -14,11 +14,7 @@ This code generates an SVG logo with customizable text & shape properties. It us
   - [Screenshots](#screenshots)
   - [Example](#example)
   - [Tests](#tests)
-
   - [License](#license)
-
-  [![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)](https://opensource.org/licenses/GPL)
-  
   - [Questions](#questions)
 
 
@@ -40,7 +36,8 @@ This code generates an SVG logo with customizable text & shape properties. It us
 
 
 ## Licence
-
+  [![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)](https://opensource.org/licenses/GPL)
+  
 ## Questions
   
   If you have any questions, please contact me at dexit@dyc.lv. You can also check out my GitHub profile at <https://github.com/dExIT>.
