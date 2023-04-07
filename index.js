@@ -1,21 +1,33 @@
-const inquirer = import('inquirer');
-const chalk = import('chalk');
-const chalkPipe = import('inquirer-chalk-pipe');
-const fs = import('fs');
+const fs = require('fs');
+//const chalk = import('chalk');
 
-const Shapes = require('./lib/shape');
-const questions = [
+
+const {Shape, Triangle, Circle, Square} = require("./lib/shape");
+
+const inquirer = require('inquirer');
+// Importing module
+
+  
+
+
+const questions =[
     {
       name: 'text',
-      message: 'Enter up to three characters for the logo:',
-      validate: function (value) {
-        return value.length >= 7 ? true : 'Please enter up to 7 characters.';
+      message: 'Please enter a text with 7 or fewer characters:',
+      validate:  (input) => {
+        if (input.length <= 7) {
+          return true;
+        } else {
+          return false;
+        }
       },
+      
     },
     {
       name: 'textColor',
       message: 'Enter text color (e.g. red or #FF0000):',
-      validate: isValidColor,
+      validate: (input) => isValidColor(input),
+    //  transformer: (input) => chalk(input)(input),
     },
     {
       type: 'list',
@@ -25,54 +37,56 @@ const questions = [
     },
     {
       name: 'shapeColor',
-      message: 'Enter shape color (e.g. blue or #0000FF):',
-      validate: isValidColor,
+      message: 'Enter text color (e.g. red or #FF0000):',
+      validate: (input) => isValidColor(input),
     },
   ];
   function isValidColor(color) {
-    const hexRegex = '/^#([A-Fa-f0-9]{3,6})$/';
-    if (color.match(hexRegex) || ['black', 'white', 'red', 'green', 'blue', 'yellow', 'pink', 'purple'].includes(color.toLowerCase())) {
+    const hexRegex = '';
+    if (color.length > 1) {
       return true;
-    }  try {
-        return !!chalk(color);
-      } catch (error) {
-        return false;
+    }else{
+             return false;
       }
   }
 
-   
+function runme(){   
     inquirer.prompt(questions).then((answers) => {
         const { text, textColor, shape, shapeColor } = answers;
       
         let shapeObj;
         switch (shape.toLowerCase()) {
           case 'circle':
-            shapeObj = new Circle(shapeColor);
+            shapeObj = new Circle(shapeColor, shapeColor);
             break;
           case 'triangle':
-            shapeObj = new Triangle(shapeColor);
+            shapeObj = new Triangle(shapeColor, shapeColor);
             break;
           case 'square':
-            shapeObj = new Square(shapeColor);
+            shapeObj = new Square(shapeColor, shapeColor);
             break;
           default:
             throw new Error('Invalid shape');
         }
       
-        const svg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300" height="200" style="">
                         ${shapeObj.render()}
-                        <text x="50" y="60" font-size="20" text-anchor="middle" fill="${textColor}">${text}</text>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${textColor}">${text}</text>
                       </svg>`;
       
-        fs.writeFile('logo.svg', svg, (err) => {
+        fs.writeFile('./examples/logo.svg', svg, (err) => {
           if (err) throw err;
           
-          console.log(
-          chalk.green('Generated logo.svg'));
+          console.log
+         
+           ('Generated logo.svg');
         });
       }).catch((err) => {
-        console.error(chalk.red(err));
+        console.error(error(err));
 
     });
 
 
+  }
+
+  runme();
