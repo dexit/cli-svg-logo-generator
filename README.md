@@ -1,5 +1,5 @@
 # CLI SVG Logo Generator
-[![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)]
+![License: GPL](https://img.shields.io/badge/License-GPL-green.svg)
 
 ## Description
 This code generates an SVG logo with customizable text & shape properties. It uses 'inquirer' module to prompt user input, 'fs' for file operations, & a custom shape module. User answers are used to create an SVG string that's written to a file.
