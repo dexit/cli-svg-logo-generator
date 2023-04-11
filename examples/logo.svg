@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300" height="200" style="">
-                        <rect x="50" y="50" fill="#441c00" stroke="#441c00" stroke-width="2px" width="200" height="200" />
+                        <polygon points="150,50 75,150 225,150" fill="cyan" />
 
-                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="cyan">Rihards</text>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#88ebeb">Rihards</text>
                       </svg>

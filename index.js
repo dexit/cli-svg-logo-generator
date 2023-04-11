@@ -37,7 +37,7 @@ const questions =[
     },
     {
       name: 'shapeColor',
-      message: 'Enter text color (e.g. red or #FF0000):',
+      message: 'Enter Shape Background color (e.g. red or #FF0000):',
       validate: (input) => isValidColor(input),
     },
   ];
