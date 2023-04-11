@@ -34,6 +34,12 @@ Run by executing via node :
 
 ## Walkthrough
 
+
+
+https://user-images.githubusercontent.com/6205151/231274288-1b6be58d-c3d1-4cf8-ab63-e58aa0051863.mp4
+
+
+
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/6205151/230527319-dadc761a-c4ee-475a-8ee0-e7322f9e5d9b.png)
 
