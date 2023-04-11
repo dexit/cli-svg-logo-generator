@@ -18,7 +18,10 @@ const questions =[
         if (input.length <= 7) {
           return true;
         } else {
-          return false;
+          
+          // inquire return message on error
+          return 'ERROR: Please enter a text with 7 or fewer characters';
+         // return false;
         }
       },
       
